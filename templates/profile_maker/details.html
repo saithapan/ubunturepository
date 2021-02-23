@@ -1,0 +1,15 @@
+<html>
+    <body>
+{% for i in user_pr %}
+<div class="jumbotron">
+  <h1 class="display-4">Welcome to DataFlair<br>Hello {{ i.fname }}</h1>
+  <p class="lead">its an awesome profile picture</p>
+  <hr class="my-4">
+  <img src="http://127.0.0.1:8000/{{ i.display_picture.url }}" class="image_responsive" height="100px" width="100px">
+  <p>
+    {{ i.display_picture.url }}<BR>
+   You have learned some awesome technologies like {{ i.technologies }}</p>
+</div>
+{% endfor %}
+</body>
+</html>

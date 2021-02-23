@@ -1,0 +1,29 @@
+<html>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <body>
+        <p>
+            hi this is newpage
+        </p>
+        <button id="new_button" onclick="asdf()">
+            new_button
+        </button>
+    </body>
+    <script>
+        $("#new_button").click(function(){
+            
+            alert("coming")
+            $.ajax({
+                url:'ajaxpage',
+                data:{
+                    "firstdata":"firstdata"
+                },
+                type:'GET',
+                success:function(data){
+                    alert(data['data'])
+                    
+                }
+            })
+        })
+    </script>
+
+</html>
